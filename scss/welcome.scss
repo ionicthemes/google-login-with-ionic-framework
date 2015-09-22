@@ -1,0 +1,105 @@
+.welcome-view
+{
+	background-color: $background-color;
+
+	.top-content
+  {
+    height: 66%;
+
+		.app-copy
+		{
+			text-align: center;
+			padding-top: 13vh;
+		}
+
+		.app-logo
+		{
+			font-size: 60px;
+			font-family: sans-serif;
+			font-weight: 600;
+			color: $welcome-color;
+			letter-spacing: 8px;
+			text-transform: uppercase;
+		}
+
+		.app-tagline
+		{
+			font-size: 16px;
+			margin-top: 0px;
+			font-weight: 500;
+			color: rgba($welcome-color, 0.95);
+		}
+	}
+
+	.bottom-content
+  {
+    height: 34%;
+
+		.google-sign-in,
+		.facebook-sign-in,
+		.twitter-sign-in
+		{
+			border-radius: 4px;
+			font-weight: 500;
+		}
+
+		.google-sign-in
+		{
+			color: $google-red;
+			background-color: $auth-big-btn-bg;
+			border-color: darken($auth-big-btn-bg, 2);
+		}
+
+		// .facebook-sign-in
+		// {
+		// 	color: $auth-small-btn-color;
+		// 	background-color: $facebook-blue;
+		// 	border-color: darken($facebook-blue, 2);
+		// }
+    //
+		// .twitter-sign-in
+		// {
+		// 	color: $auth-small-btn-color;
+		// 	background-color: $twitter-blue;
+		// 	border-color: darken($twitter-blue, 2);
+		// }
+
+		.split-actions
+		{
+			padding: 0px;
+
+			.button
+			{
+				margin: 0px;
+			}
+
+			.col
+			{
+				padding-top: 0px;
+				padding-bottom: 0px;
+
+				&:first-child
+				{
+					padding-left: 0px;
+				}
+
+				&:last-child
+				{
+					padding-right: 0px;
+				}
+			}
+		}
+
+		.other-actions
+		{
+			margin-top: 20px;
+
+			.button-clear
+			{
+				font-weight: 500;
+				font-size: 14px;
+				color: rgba($welcome-color, 0.85);
+			}
+		}
+	}
+}
