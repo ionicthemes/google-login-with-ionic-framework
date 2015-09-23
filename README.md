@@ -19,7 +19,7 @@ The way it works for hybrid apps to use native api’s and sdk’s is simple, yo
 
 ### Cordova plugin to login with Google+ on iOS and Android
 
-This plugin was developed by [Eddy Verbruggen](http://twitter.com/eddyverbruggen) and it allows you to log in with your Google account on iOS and Android. You will not only get the email address of the user, but also stuff like their full name and gender.
+The plugin we are using was developed by [Eddy Verbruggen](http://twitter.com/eddyverbruggen) and it allows your users to log into your app with their Google account on iOS and Android. You will not only get the email address of the user, but also stuff like their full name and gender.
 You can find more information in the [cordova-plugin-googleplus documentation](https://github.com/EddyVerbruggen/cordova-plugin-googleplus).
 
 
@@ -27,10 +27,10 @@ Having said that, let’s take a look at the basic requirements for this tutoria
 
 **Requirements:**
 
-- You need an Ionic app where you will integrate this login. You can either use a blank app, or an existing one. Ad time!:If you are looking for a beautiful starter app with login UI/UX you must have a look at our beautiful mobile themes, templates & components. Specially to our [Logins Category](https://ionicthemes.com/logins).
+- You need an Ionic app where you will integrate this login. You can either use a blank app, or an existing one. **Ad time!**: If you are looking for a beautiful starter app with login UI/UX you must have a look at our beautiful mobile themes, templates & components. Specially to our [Logins Category](https://ionicthemes.com/logins).
 - You need to follow the setup steps for android (to enable google+ login on android)  
 - You need to follow the setup steps for iOS (to enable google+ login on iOS)  
-- Install Google+ Cordova/PhoneGap Plugin
+- Install Google+ Cordova/PhoneGap Plugin in your app
 
 ### How it will look like:
 
@@ -51,14 +51,14 @@ Having said that, let’s take a look at the basic requirements for this tutoria
 There are some configurations you need to set in order to communicate your app with Google+
 
 ### iOS
-1. To get your iOS API key, follow Step 1: Creating the Google Developers Console project of the [guide to Start integrating Google+ into your iOS app](https://developers.google.com/+/mobile/ios/getting-started).
-2. [Enable Google services for your app](https://developers.google.com/mobile/add?platform=ios&cntapi=signin) to get a configuration file GoogleService-Info.plist which contains the REVERSED_CLIENT_ID that you will need during the plugin’s installation.
+1. To get your iOS API key, follow **Step 1: Creating the Google Developers Console project** of the [guide to Start integrating Google+ into your iOS app](https://developers.google.com/+/mobile/ios/getting-started).
+2. [Enable Google services for your app](https://developers.google.com/mobile/add?platform=ios&cntapi=signin) to get a configuration file **GoogleService-Info.plist** which contains the REVERSED_CLIENT_ID that you will need during the plugin’s installation.
 
 ### Android
-1. Follow Step 1: Enable the Google+ API of the guide: [Quick-start sample app for Android](https://developers.google.com/+/quickstart/android).
+1. Follow **Step 1: Enable the Google+ API** of the guide: [Quick-start sample app for Android](https://developers.google.com/+/quickstart/android).
 2. Make sure you execute the keytool steps or authentication will fail.
 
-**To generate Android SHA1 key run the following command, the default password is android:**
+To generate Android SHA1 key run the following command, the default password is android:
 ```
 $ keytool -exportcert -alias androiddebugkey -keystore ~/.android/debug.keystore -list -v
 ```
@@ -78,18 +78,18 @@ $ cordova plugin add cordova-plugin-googleplus --variable REVERSED_CLIENT_ID=myr
 
 GooglePlus.js is brought in automatically. There is no need to change or add anything in your html.
 
-To see other ways to install the plugin or if you are using Phonegap Build, go to the [plugin documentation](https://github.com/EddyVerbruggen/cordova-plugin-googleplus).
+To see other ways to install the plugin or if you are using Phonegap Build, see the [plugin documentation](https://github.com/EddyVerbruggen/cordova-plugin-googleplus).
 
 #### What we have done so far:
 
 - An Ionic app (existing or new one)
-- A Google app with the proper configurations
+- Required configurations to communicate your app with GooglePlus
 - GooglePlus Plugin installed into your Ionic app
 
 
 ## Step 3: Adding Login/Logout functionality
 
-Now we will go straight to the code so open your Ionic app with your preferred code editor.Personally I use and recommend [atom](https://atom.io/).
+Now we will go straight to the code so open your Ionic app with your preferred code editor. Personally I use and recommend [atom](https://atom.io/).
 
 ### Login
 
@@ -98,7 +98,7 @@ The best way to show you how to add Login functionality is with a real example o
 ```javascript
 .controller('WelcomeCtrl', function($scope, $state, UserService, $ionicLoading) {
 
-  //This method is executed when the user press the "Login with Google" button
+  //This method is executed when the user press the "Sign in with Google" button
   $scope.googleSignIn = function() {
     $ionicLoading.show({
       template: 'Logging in...'
@@ -138,7 +138,7 @@ Then in your html you should add a “Sign in with Google” button
 
 ### Logout
 
-The following controller contains all the necessary code for the facebook sign out:
+The following controller contains all the necessary code for Google sign out:
 ```javascript
 .controller('HomeCtrl', function($scope, UserService, $ionicActionSheet, $state, $ionicLoading){
 
@@ -183,7 +183,7 @@ Then in your html you should add a “Log out” button
 ```
 
 
-Services
+**Services**
 
 You also will need some services to store and get your user’s data. For the purpose of this example I will store user data on the device local storage but you should save it on a database.
 
@@ -212,3 +212,17 @@ angular.module('services', [])
 ### What we have done so far:
 
 - At this point you should have an Ionic app with Google login and logout functionalities working.
+
+
+## Next steps:
+After having the authentication working you can focus on:
+- The routing and adding access control to certain pages within your app
+- Store users and tokens in your own database
+- Using analytics tools to track users and what they do in your app
+- Integrate other authentication methods so your users have more options to choose from
+- Prettifying your app using a theme or your design skills, taking advantage of the many possibilities that Ionic and Sass provide
+- [Integrate and make use of other Google+ API functionalities to give more powers to your app.](https://github.com/EddyVerbruggen/cordova-plugin-googleplus#6-usage)
+
+
+
+As you may know we also sell beautiful mobile themes, templates and components that you may find super useful as they save you hours of development, time and effort, while giving your projects a great design from scratch. Having said that we have a line of [Login / Authentication components](https://www.ionicthemes.com/logins) that would be the perfect match for your Google+ Native integration.
