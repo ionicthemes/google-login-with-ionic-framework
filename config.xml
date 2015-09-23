@@ -2,11 +2,11 @@
 <widget id="com.startapplabs.google-login" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>google-login</name>
   <description>
-        An Ionic Framework and Cordova project.
-    </description>
-  <author email="hi@ionicframework" href="http://ionicframework.com/">
-      Ionic Framework Team
-    </author>
+    Example app of how to add Google Plus authentication into an Ionic Framework app.
+  </description>
+  <author email="info@ionicthemes.com" href="https://ionicthemes.com/">
+    IonicThemes
+  </author>
   <content src="index.html"/>
   <access origin="*"/>
   <preference name="webviewbounce" value="false"/>

@@ -7721,27 +7721,9 @@ a.button {
       color: rgba(255, 255, 255, 0.95); }
   .welcome-view .bottom-content {
     height: 34%; }
-    .welcome-view .bottom-content .google-sign-in, .welcome-view .bottom-content .facebook-sign-in, .welcome-view .bottom-content .twitter-sign-in {
-      border-radius: 4px;
-      font-weight: 500; }
     .welcome-view .bottom-content .google-sign-in {
+      border-radius: 4px;
+      font-weight: 500;
       color: #FFF;
       background-color: #dd4c39;
       border-color: #dc4430; }
-    .welcome-view .bottom-content .split-actions {
-      padding: 0px; }
-      .welcome-view .bottom-content .split-actions .button {
-        margin: 0px; }
-      .welcome-view .bottom-content .split-actions .col {
-        padding-top: 0px;
-        padding-bottom: 0px; }
-        .welcome-view .bottom-content .split-actions .col:first-child {
-          padding-left: 0px; }
-        .welcome-view .bottom-content .split-actions .col:last-child {
-          padding-right: 0px; }
-    .welcome-view .bottom-content .other-actions {
-      margin-top: 20px; }
-      .welcome-view .bottom-content .other-actions .button-clear {
-        font-weight: 500;
-        font-size: 14px;
-        color: rgba(255, 255, 255, 0.85); }
