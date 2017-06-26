@@ -2,7 +2,7 @@
 
 This repository is an example app of how to add Google Plus authentication into an Ionic Framework app.
 
-## Follow the step-by-step instructions available here: https://ionicthemes.com/learn/about/google-plus-login-with-ionic-framework
+## Follow the step-by-step instructions available here: https://ionicthemes.com/tutorials/about/google-plus-login-with-ionic-framework
 
 **Why adding Google Authentication into your app will benefit you and your users?**
 
@@ -33,4 +33,4 @@ The way it works for hybrid apps to use native api’s and sdk’s is simple, yo
 ![](https://dl.dropboxusercontent.com/u/30675090/ionic_themes/google-login/android-google1.png)
 ![](https://dl.dropboxusercontent.com/u/30675090/ionic_themes/google-login/android-google2.png)
 
-## To get this done, follow the step-by-step instructions available here: https://ionicthemes.com/learn/about/google-plus-login-with-ionic-framework
+## To get this done, follow the step-by-step instructions available here: https://ionicthemes.com/tutorials/about/google-plus-login-with-ionic-framework
